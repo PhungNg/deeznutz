@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Lille tema oppgaven</title>
+    <link rel="stylesheet" href="index.css">
+    <link href="https://fonts.googleapis.com/css?family=VT323&display=swap" rel="stylesheet">
+</head>
+<body>
+    <main>
+        <div id="frontPage">
+            <h2 id="gameTitle">
+                catch deez <br> nutz
+            </h2>
+            <div id="play" class="button" onclick="startGame()">
+                play
+            </div>
+            <div id="difficulty">
+                <h2>Difficulty:</h2>
+                <article id="easyMode">
+                    <img id="imgEasy" src="img/easySquirrel.png" >
+                    <h3>Easy</h3>
+                </article>
+                <article id="normalMode">
+                    <img id="imgNormal" class="choosenSquirrel" src="img/normalSquirrel.png" >
+                    <h3>Normal</h3>
+                </article>
+                <article id="hardMode">
+                    <img id="imgHard" src="img/hardSquirrel.png" > 
+                    <h3>Hard</h3>
+                </article>
+            </div>
+            <img src="img/nut.png" id="lvlIndicator">
+        </div>
+        <div id="gameEnd">
+            <h1 id="gameOverTitle">Game Over</h1>
+            <div id="retry" class="button" onclick="startGame()">retry</div>
+            <div id="home" class="button"></div>
+        </div>
+        <div id="newBestScore">
+                <h1>NEW BEST</h1>
+                <form id="data">
+                    <input id="inpName" autocomplete="off" type="text" placeholder="Name" maxlength="3" autofocus>
+                </form>
+                <div id="subHiscore" onclick="newBest()">
+                    <h3>Send your nuts</h3>
+                </div>
+        </div>
+    </main>
+    <canvas id="canvas" width="420" height="620">
+    </canvas>
+    <section id="leaderBoard">
+            <h1>Hiscore</h1>
+            <div id="container">
+                <div>
+                    <ol id="nameList">
+                        
+                    </ol>
+                </div>
+                <div>
+                    <ul id="scoreList">
+                    </ul>
+                </div>
+            </div>
+            <img src="img/nut.png" id="hsIndicator" alt="">
+                    <div id="hsBtns">
+                        <div id="easyHS">Easy</div>
+                        <div id="normalHS">Normal</div>
+                        <div id="hardHS">Hard</div>
+                    </div>
+                
+    </section>
+    <img src="img/nut.png" id="nut" style="display: none">
+    <script src="index.js"></script>
+</body>
+</html>
